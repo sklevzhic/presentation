@@ -1,46 +1,151 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>CSS Grid
-				<span style="color: rebeccapurple">dsfsd</span>
-				</section>
-				<section>
-					<section><img src="./assets/img.png" alt=""></section>
-					<section>Vertical Slide 2</section>
-				</section>
-			</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <div class="titleMain">CSS GRID</div>
+        </section>
+        <section>
+            <section>
+                <div class="titleMain">Basic terms</div>
+            </section>
+            <section>
+                <div class="title">Грид-контейнер</div>
+                <span class="description">родительский элемент, к которому применяется свойство <code> display: grid.</code></span>
+            </section>
+            <section>
+                <div class="title">Грид-элемент</div>
+                <span class="description">дочерний элемент, прямой потомок грид-контейнера. Подчиняется правилам раскладки гридов.</span>
+            </section>
+            <section>
+                <div class="title">Грид-линия</div>
+                <span class="description">разделительная линия, формирующая структуру грида. Может быть как вертикальной (грид-линия колонки), так и горизонтальной (грид-линия ряда). Располагается по обе стороны от колонки или ряда. Используется для привязки грид-элементов.</span>
+                <img src="./assets/grid-line.png" alt="">
+            </section>
+            <section>
+                <div class="title">Грид-ячейка</div>
+                <span class="description">пространство между соседними грид-линиями. Единица грид-сетки.</span>
+                <img src="./assets/grid-cell.png" alt="">
+            </section>
 
-		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+            <section>
+                <div class="title">Грид-полоса</div>
+                <span class="description">пространство между двумя соседними грид-линиями. Может быть проще думать о грид-полосе как о ряде или колонке.</span>
+                <img src="./assets/grid-polosa.png" alt="">
+            </section>
+            <section>
+                <div class="title">Грид-область</div>
+                <span class="description">область, ограниченная четырьмя грид-линиями. Может состоять из любого количества ячеек как по горизонтали, так и по вертикали.</span>
+                <img src="./assets/grid-area.png" alt="">
+            </section>
+        </section>
+        <section>
+            <section>
+                <div class="titleMain">Свойства грид-контейнера</div>
+            </section>
+            <section>
+                <img src="./assets/display.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/template-columns.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/template-rows.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/names.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/dubblenames.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/repeat.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/repeat1.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/repeat2.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/fr1.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/auto-rows.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/auto-rows1.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/auto-flow.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/auto-flow1.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/template-areas.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/shortcat-template.png" alt="">
+            </section>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+            <section>Свойства грид-элементов</section>
+
+            <section>
+                grid-column-start, grid-column-end, grid-row-start, grid-row-end
+            </section>
+            <section>
+                grid-column, grid-row
+            </section>
+            <section>
+                grid-area
+            </section>
+            <section>
+                justify-self
+            </section>
+            <section>
+                align-self
+            </section>
+            <section>
+                place-self
+            </section>
+        </section>
+    </div>
+
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+  // More info about initialization & config:
+  // - https://revealjs.com/initialization/
+  // - https://revealjs.com/config/
+  Reveal.initialize({
+    hash: true,
+
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  });
+</script>
+</body>
 </html>
