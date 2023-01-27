@@ -1,0 +1,20 @@
+.reveal .slides section, .reveal .slides section  > div.title {
+    font-size: 36px;
+    color: #0d99a5;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+
+.reveal .slides section, .reveal .slides section  > div.titleMain {
+    font-size: 45px;
+    color: #3eb249;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.reveal .slides section, .reveal .slides section  > span.description {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 20px;
+}
+
