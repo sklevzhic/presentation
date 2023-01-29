@@ -22,42 +22,57 @@
         </section>
         <section>
             <section>
-                <div class="titleMain">Basic terms</div>
+                <div class="titleMain">Terminology</div>
             </section>
             <section>
-                <div class="title">Грид-контейнер</div>
-                <span class="description">родительский элемент, к которому применяется свойство <code> display: grid.</code></span>
+                <div class="title">Grid Container</div>
+                <span class="description">The parent element to which the property is applied<code> display: grid.</code></span>
+                <pre><code data-line-numbers="2">
+                    <div class="container">
+                      <div class="item item-1"> </div>
+                      <div class="item item-2"> </div>
+                      <div class="item item-3"> </div>
+                    </div>
+                </code></pre>
             </section>
             <section>
-                <div class="title">Грид-элемент</div>
-                <span class="description">дочерний элемент, прямой потомок грид-контейнера. Подчиняется правилам раскладки гридов.</span>
+                <div class="title">Grid Item</div>
+                <span class="description">The children of the grid container. </span>
+                <pre><code data-line-numbers="3-6">
+                    <div class="container">
+                      <div class="item"> </div>
+                      <div class="item"> </div>
+                      <div class="item"> </div>
+                    </div>
+                </code></pre>
             </section>
             <section>
-                <div class="title">Грид-линия</div>
-                <span class="description">разделительная линия, формирующая структуру грида. Может быть как вертикальной (грид-линия колонки), так и горизонтальной (грид-линия ряда). Располагается по обе стороны от колонки или ряда. Используется для привязки грид-элементов.</span>
+                <div class="title">Grid Line</div>
+                <span class="description">The dividing lines that make up the structure of the grid. </span>
                 <img src="./assets/grid-line.png" alt="">
             </section>
             <section>
-                <div class="title">Грид-ячейка</div>
-                <span class="description">пространство между соседними грид-линиями. Единица грид-сетки.</span>
+                <div class="title">Grid Cell</div>
+                <span class="description">The space between two adjacent row and two adjacent column grid lines.</span>
                 <img src="./assets/grid-cell.png" alt="">
             </section>
 
 
             <section>
-                <div class="title">Грид-полоса</div>
-                <span class="description">пространство между двумя соседними грид-линиями. Может быть проще думать о грид-полосе как о ряде или колонке.</span>
+                <div class="title">Grid track</div>
+                <span class="description">The space between two adjacent grid lines. </span>
                 <img src="./assets/grid-polosa.png" alt="">
             </section>
             <section>
-                <div class="title">Грид-область</div>
-                <span class="description">область, ограниченная четырьмя грид-линиями. Может состоять из любого количества ячеек как по горизонтали, так и по вертикали.</span>
+                <div class="title">Grid Area</div>
+                <span class="description">The total space surrounded by four grid lines. </span>
                 <img src="./assets/grid-area.png" alt="">
             </section>
         </section>
         <section>
             <section>
-                <div class="titleMain">Свойства грид-контейнера</div>
+                <div class="titleMain">Properties for the Parent
+                    (Grid Container)</div>
             </section>
             <section>
                 <img src="./assets/display.png" alt="">
@@ -78,10 +93,12 @@
                 <img src="./assets/repeat.png" alt="">
             </section>
             <section>
-                <img src="./assets/repeat1.png" alt="">
+                <div class="title">fr (fraction) - <span> It is not a length like px or % but is instead considered a "flex" unit. The free space in a container is distributed amongst the fr values.</span>
+                </div>
+                <img src="./assets/repeat2.png" alt="">
             </section>
             <section>
-                <img src="./assets/repeat2.png" alt="">
+                <img src="./assets/repeat1.png" alt="">
             </section>
             <section>
                 <img src="./assets/fr1.png" alt="">
@@ -95,37 +112,133 @@
             <section>
                 <img src="./assets/auto-flow.png" alt="">
             </section>
-            <section>
-                <img src="./assets/auto-flow1.png" alt="">
-            </section>
+
             <section>
                 <img src="./assets/template-areas.png" alt="">
             </section>
             <section>
                 <img src="./assets/shortcat-template.png" alt="">
             </section>
+
+            <section>
+                <img src="./assets/gap.png" alt="">
+            </section>
+
+            <section>
+                <div>justify-items: start</div>
+                <img src="./assets/justify-items-start.png" alt="">
+            </section>
+            <section>
+                <div>justify-items: end</div>
+                <img src="./assets/justify-items-end.png" alt="">
+            </section>
+            <section>
+                <div>justify-items: center</div>
+                <img src="./assets/justify-items-center.png" alt="">
+            </section>
+            <section>
+                <div>justify-items: stretch</div>
+                <img src="./assets/justify-items-stretch.png" alt="">
+            </section>
         </section>
 
         <section>
-            <section>Свойства грид-элементов</section>
+            <section>
+                <div class="titleMain">Properties for the Children
+                    (Grid Items)</div>
+            </section>
+            <section>
+                <div>grid-column-start, grid-column-end, grid-row-start, grid-row-end</div>
+
+                <div></div>
+                <ul>
+                    <li>name || number line</li>
+                    <li>span number</li>
+                    <li>span name</li>
+                    <li>auto</li>
+                </ul>
+
+
+
+
+            </section>
+            <section>
+
+                <div>
+                        <pre><code data-trim data-noescape>
+                        .container {
+                            display: grid;
+                            grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six];
+                            grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+                        }
+
+                        .item1 {
+                            grid-column-start: 2;
+                            grid-column-end: five;
+                            grid-row-start: row1-start;
+                            grid-row-end: 3;
+                        }
+                </code></pre>
+                    <img src="./assets/1.png" alt="">
+                </div>
+            </section>
+            <section>
+                <div></div>
+                grid-column, grid-row
+                <div>
+                        <pre><code data-trim data-noescape>
+                    .item1 {
+                      grid-column: 3 / span 2;
+                      grid-row: third-line / 4;
+                    }
+                </code></pre>
+                </div>
+            </section>
+            <section>
+                <div></div>
+                grid-area
+                <div>
+                        <pre><code data-trim data-noescape>
+                    .item2 {
+                      grid-area: 1 / col4-start / last-line / 6;
+                    }
+                </code></pre>
+                </div>
+            </section>
+
 
             <section>
-                grid-column-start, grid-column-end, grid-row-start, grid-row-end
-            </section>
-            <section>
-                grid-column, grid-row
-            </section>
-            <section>
-                grid-area
-            </section>
-            <section>
+                <div></div>
                 justify-self
+                <div>
+                        <pre><code data-trim data-noescape>
+                    .container {
+                      justify-items: stretch;
+                    }
+                    
+                    .item1 {
+                      justify-self: center;
+                    }
+                </code></pre>
+                    <img src="./assets/justify-self.png" alt="">
+                </div>
             </section>
             <section>
+                <div></div>
                 align-self
-            </section>
-            <section>
-                place-self
+                <div>
+                        <pre><code data-trim data-noescape>
+                        .container {
+                          align-items: stretch;
+                        }
+
+                        .item1 {
+                          align-self: start;
+                        }
+
+                </code></pre>
+                    <img src="./assets/justify-self.png" alt="">
+                </div>
             </section>
         </section>
     </div>
